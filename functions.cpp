@@ -594,7 +594,7 @@ float computeErrorRate(cv::Mat const &image1In, cv::Mat const &image2In)
     
     
     // we compute the error rate
-    int errorCounter = 0;
+    float errorCounter = 0;
     for (int i = 0; i < n; i++) // for each pixel in the image...
     {
         for (int j = 0; j < n; j++) {
@@ -604,7 +604,7 @@ float computeErrorRate(cv::Mat const &image1In, cv::Mat const &image2In)
             }
         }
     }
-    float errorRate = errorCounter / (n*n);
+    float errorRate = errorCounter / (float)(n*n);
     
     // we return the error rate
     return errorRate;
@@ -612,7 +612,22 @@ float computeErrorRate(cv::Mat const &image1In, cv::Mat const &image2In)
 }
 
 
+float computeMean(std::vector<float> currentNoiseErrorRates)
+{
+    float mean = 0;
+    for (int i = 0; i < currentNoiseErrorRates.size(); i++) {
+        mean += currentNoiseErrorRates[i];
+    }
+    mean /= (float)currentNoiseErrorRates.size();
+    return mean;
+    
+}
 
-
+float computeMedian(std::vector<float> currentNoiseErrorRates)
+{
+    std::sort(currentNoiseErrorRates.begin(), currentNoiseErrorRates.end());
+    float median = currentNoiseErrorRates[(int)currentNoiseErrorRates.size()/2];
+    return median;
+}
 
 

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F5595101C30426D00D47A6E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F55950F1C30426D00D47A6E /* main.cpp */; };
-		8F5595191C30453700D47A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5595181C30453700D47A6E /* Foundation.framework */; };
+		8F5595191C30453700D47A6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5595181C30453700D47A6E /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		8F55951B1C30456200D47A6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F55951A1C30456200D47A6E /* CoreGraphics.framework */; };
-		8FE107AB1C329F31003D67FB /* functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FE107A91C329F31003D67FB /* functions.cpp */; };
+		8F9989171C7A20C1000FAD57 /* functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F9989151C7A20C1000FAD57 /* functions.cpp */; };
+		8F9989191C7A20E9000FAD57 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F9989181C7A20E9000FAD57 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +27,11 @@
 
 /* Begin PBXFileReference section */
 		8F55950C1C30426D00D47A6E /* MedianFilterExperiments */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MedianFilterExperiments; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F55950F1C30426D00D47A6E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = main.cpp; sourceTree = "<group>"; };
 		8F5595181C30453700D47A6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F55951A1C30456200D47A6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8FE107A91C329F31003D67FB /* functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = functions.cpp; sourceTree = "<group>"; };
-		8FE107AA1C329F31003D67FB /* functions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = functions.hpp; sourceTree = "<group>"; };
+		8F9989151C7A20C1000FAD57 /* functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = functions.cpp; sourceTree = SOURCE_ROOT; };
+		8F9989161C7A20C1000FAD57 /* functions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = functions.hpp; sourceTree = SOURCE_ROOT; };
+		8F9989181C7A20E9000FAD57 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +67,9 @@
 		8F55950E1C30426D00D47A6E /* MedianFilterExperiments */ = {
 			isa = PBXGroup;
 			children = (
-				8F55950F1C30426D00D47A6E /* main.cpp */,
-				8FE107A91C329F31003D67FB /* functions.cpp */,
-				8FE107AA1C329F31003D67FB /* functions.hpp */,
+				8F9989181C7A20E9000FAD57 /* main.cpp */,
+				8F9989151C7A20C1000FAD57 /* functions.cpp */,
+				8F9989161C7A20C1000FAD57 /* functions.hpp */,
 			);
 			path = MedianFilterExperiments;
 			sourceTree = "<group>";
@@ -139,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F5595101C30426D00D47A6E /* main.cpp in Sources */,
-				8FE107AB1C329F31003D67FB /* functions.cpp in Sources */,
+				8F9989191C7A20E9000FAD57 /* main.cpp in Sources */,
+				8F9989171C7A20C1000FAD57 /* functions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +237,7 @@
 				);
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = /Users/mlimbert/Documents/MedianFilterExperiments/Build/Products/Debug;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = NO;
@@ -274,6 +275,7 @@
 				);
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = /Users/mlimbert/Documents/MedianFilterExperiments/Build/Products/Debug;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = NO;

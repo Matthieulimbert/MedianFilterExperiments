@@ -34,5 +34,7 @@ void denoiseAdaptiveEllipticMF(cv::Mat const &noisyImageIn, cv::Mat const &dista
 
 // computation of the error rate
 float computeErrorRate(cv::Mat const &image1In, cv::Mat const &image2In);
+float computeMean(std::vector<float> currentNoiseErrorRates);
+float computeMedian(std::vector<float> currentNoiseErrorRates);
 
 #endif /* functions_hpp */
